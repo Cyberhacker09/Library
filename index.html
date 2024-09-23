@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Library Management System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Library Management System</h1>
+    <video autoplay loop muted plays-inline class="c">
+      <source src="Library B-Roll Sequence.mp4" type="video/mp4"></source>
+    </video>
+    
+    <div class="section" id="add-book">
+      <h2>Add Book</h2>
+      <label for="title">Title:</label>
+      <input type="text" id="title" name="title" required><br><br>
+      <label for="author">Author:</label>
+      <input type="text" id="author" name="author" required><br><br>
+      <label for="isbn">ISBN:</label>
+      <input type="text" id="isbn" name="isbn" required><br><br>
+      <label for="image">Image URL:</label>
+      <input type="text" id="image" name="image" placeholder="Paste book image URL"><br><br>
+      <label for="link">Book Link:</label>
+      <input type="text" id="link" name="link" placeholder="Paste book link from website"><br><br>
+      <button onclick="addBook()">Add Book</button>
+    </div>
+    <div class="section" id="search-book">
+      <h2>Search Book</h2>
+      <input type="text" id="search-term" placeholder="Search by title, author, or ISBN" onkeyup="searchBook()"><br><br>
+    </div>
+    <div class="section" id="book-list">
+      <h2>Book List</h2>
+      <table id="book-table">
+        <thead>
+          <tr>
+            <th>Image</th>
+            <th>Title</th>
+            <th>Author</th>
+            <th>ISBN</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- table data will be populated here -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
